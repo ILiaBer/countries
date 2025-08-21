@@ -6,5 +6,5 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface CountriesRepository extends JpaRepository<CountriesEntity, UUID> {
-//    Optional<CountriesEntity> findByCountryCode(String countryCode);
+    Optional<CountriesEntity> findByCountryCode(String countryCode);
 }

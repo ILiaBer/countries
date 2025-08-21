@@ -24,18 +24,18 @@ public class CountriesController {
         return countriesService.allCountries();
     }
 
-//    @PostMapping("/add")
-//    public ResponseEntity<String> addCountry(
-//            @RequestParam String name,
-//            @RequestParam String code) {
-//        countriesService.addCountry(name, code);
-//        return ResponseEntity.ok("Country added successfully");
-//    }
-//
-//    @PatchMapping("/{code}/name")
-//    public void updateCountryName(
-//            @PathVariable String code,
-//            @RequestParam String newName) {
-//        countriesService.editCountryName(code, newName);
-//    }
+    @PostMapping("/add")
+    public ResponseEntity<String> addCountry(
+            @RequestParam String name,
+            @RequestParam String code) {
+        countriesService.addCountry(name, code);
+        return ResponseEntity.ok("Country added successfully");
+    }
+
+    @PatchMapping("/{code}/name")
+    public void editCountryName(
+            @PathVariable String code,
+            @RequestParam String newName) {
+        countriesService.editCountryName(code, newName);
+    }
 }

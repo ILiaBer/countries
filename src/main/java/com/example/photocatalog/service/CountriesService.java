@@ -8,7 +8,7 @@ public interface CountriesService {
 
     List<Country> allCountries();
 
-//    void addCountry(String countryName, String countryCode);
-//
-//    void editCountryName(String countryCode, String countryName);
+    void addCountry(String countryName, String countryCode);
+
+    void editCountryName(String countryCode, String countryName);
 }

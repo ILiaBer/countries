@@ -31,23 +31,23 @@ public class DbMemoryCountriesService implements CountriesService {
                 }).toList();
     }
 
-//    @Override
-//    public void addCountry(String name, String code) {
-//        CountriesEntity countryEntity = new CountriesEntity();
-//        countryEntity.setCountryName(name);
-//        countryEntity.setCountryCode(code);
-//        countriesRepository.save(countryEntity);
-//    }
-//
-//    @Override
-//    public void editCountryName(String countryCode, String newName) {
-//        CountriesEntity country = countriesRepository.findByCountryCode(countryCode)
-//                .orElseThrow(() -> new ResponseStatusException(
-//                        HttpStatus.NOT_FOUND,
-//                        "Country not found with code: " + countryCode
-//                ));
-//
-//        country.setCountryName(newName);
-//        countriesRepository.save(country);
-//    }
+    @Override
+    public void addCountry(String name, String code) {
+        CountriesEntity countryEntity = new CountriesEntity();
+        countryEntity.setCountryName(name);
+        countryEntity.setCountryCode(code);
+        countriesRepository.save(countryEntity);
+    }
+
+    @Override
+    public void editCountryName(String countryCode, String newName) {
+        CountriesEntity country = countriesRepository.findByCountryCode(countryCode)
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND,
+                        "Country not found with code: " + countryCode
+                ));
+
+        country.setCountryName(newName);
+        countriesRepository.save(country);
+    }
 }
