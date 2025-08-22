@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("api/countries")
@@ -20,7 +21,7 @@ public class CountriesController {
     }
 
     @GetMapping("/all")
-    public List<Country> all(){
+    public List<Country> all() {
         return countriesService.allCountries();
     }
 
@@ -37,5 +38,10 @@ public class CountriesController {
             @PathVariable String code,
             @RequestParam String newName) {
         countriesService.editCountryName(code, newName);
+    }
+
+    @GetMapping("/{id}")
+    public Country getCountryById(@PathVariable("id") UUID id) {
+        return countriesService.getCountryById(id);
     }
 }

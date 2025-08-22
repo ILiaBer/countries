@@ -3,12 +3,14 @@ package com.example.photocatalog.service;
 import com.example.photocatalog.data.CountriesEntity;
 import com.example.photocatalog.data.CountriesRepository;
 import com.example.photocatalog.domain.Country;
+import com.example.photocatalog.ex.CountryNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.UUID;
 
 @Component
 public class DbMemoryCountriesService implements CountriesService {
@@ -49,5 +51,15 @@ public class DbMemoryCountriesService implements CountriesService {
 
         country.setCountryName(newName);
         countriesRepository.save(country);
+    }
+
+    @Override
+    public Country getCountryById(UUID id) {
+        return countriesRepository.findById(id).map(
+                fe ->
+                        new Country(
+                                fe.getCountryName(),
+                                fe.getCountryCode()
+                        )).orElseThrow(CountryNotFoundException::new);
     }
 }
