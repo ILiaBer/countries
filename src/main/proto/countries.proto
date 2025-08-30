@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package guru.qa.grpc.countries;
+
+import "google/protobuf/timestamp.proto";
+
+option java_multiple_files = true;
+option java_package = "guru.qa.grpc.countries";
+option java_outer_classname = "CountriesProto";
+
+service CountriesService{
+  rpc Photo(IdRequest) returns (CountriesRequest){}
+  //Здесь использовалось graphql
+  rpc AddCoun
+}
+message IdRequest{
+  string id = 1;
+}
+
+message CountriesRequest {
+  string id = 1;
+
+  string description = 2;
+  google.protobuf.Timestamp lastModifyDate = 3;
+  string content = 4;
+}
