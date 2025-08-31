@@ -18,5 +18,5 @@ type Query{
 
 type Mutation{
     addCountry(input: CountryInput) : Country!
-#    editCountryName(string : String) : Country!
+    editCountryName(input : CountryInput, newName : String) : Country!
 }

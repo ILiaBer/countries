@@ -24,9 +24,9 @@ public class CountriesMutationController {
         return countriesService.addCountry(input);
     }
 
-//    @MutationMapping
-//    public void editCountryName(
-//            @Argument CountryInputGql input, String newName) {
-//        countriesService.editCountryName(input, newName);
-//    }
+    @MutationMapping
+    public void editCountryName(
+            @Argument CountryInputGql input, @Argument String newName) {
+        countriesService.editCountryName(input, newName);
+    }
 }
