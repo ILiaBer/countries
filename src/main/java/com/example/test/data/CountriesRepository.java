@@ -1,4 +1,4 @@
-package com.example.photocatalog.data;
+package com.example.test.data;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
