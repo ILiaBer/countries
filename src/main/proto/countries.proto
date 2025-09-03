@@ -9,18 +9,26 @@ option java_package = "guru.qa.grpc.countries";
 option java_outer_classname = "CountriesProto";
 
 service CountriesService{
-  rpc Photo(IdRequest) returns (CountriesRequest){}
+  rpc Photo(IdRequest) returns (CountriesResponse){}
   //Здесь использовалось graphql
-  rpc AddCoun
+  rpc AddCountry(CountryRequest) returns(CountriesResponse){};
+  rpc RandomCountry(CountRequest) returns (stream CountriesResponse){};
 }
 message IdRequest{
   string id = 1;
 }
 
-message CountriesRequest {
-  string id = 1;
+message CountryRequest {
+  string name = 1;
+  string code = 2;
+}
 
-  string description = 2;
-  google.protobuf.Timestamp lastModifyDate = 3;
-  string content = 4;
+message CountRequest {
+  uint32 count = 1;
+}
+
+message CountriesResponse {
+  string id = 1;
+  string name = 2;
+  string code = 3;
 }
