@@ -1,13 +1,10 @@
-package com.example.photocatalog.config;
+package com.example.test.config;
 
-import com.example.photocatalog.service.CountriesErrorAttributes;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.example.test.service.CountriesErrorAttributes;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.text.SimpleDateFormat;
 
 @Configuration
 public class AppConfig {

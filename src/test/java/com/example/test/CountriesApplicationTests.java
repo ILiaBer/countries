@@ -1,10 +1,10 @@
-package com.example.photocatalog;
+package com.example.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PhotocatalogApplicationTests {
+class CountriesApplicationTests {
 
     @Test
     void contextLoads() {

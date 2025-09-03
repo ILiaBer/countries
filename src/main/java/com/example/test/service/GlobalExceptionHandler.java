@@ -1,8 +1,8 @@
-package com.example.photocatalog.service;
+package com.example.test.service;
 
-import com.example.photocatalog.controller.CountriesController;
-import com.example.photocatalog.controller.error.ApiError;
-import com.example.photocatalog.ex.CountryNotFoundException;
+import com.example.test.controller.CountriesController;
+import com.example.test.controller.error.ApiError;
+import com.example.test.ex.CountryNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,7 +27,7 @@ public class GlobalExceptionHandler {
                 new ApiError(
                         apiVersion,
                         HttpStatus.NOT_FOUND.toString(),
-                        "Photo not found",
+                        "Country not found",
                         request.getRequestURI(),
                         ex.getMessage()
                 ),

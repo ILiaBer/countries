@@ -1,6 +1,6 @@
-package com.example.photocatalog.service;
+package com.example.test.service;
 
-import com.example.photocatalog.controller.error.ApiError;
+import com.example.test.controller.error.ApiError;
 import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;
 import org.springframework.web.context.request.WebRequest;

@@ -1,4 +1,4 @@
-package com.example.photocatalog.data;
+package com.example.test.data;
 
 import jakarta.persistence.*;
 import org.hibernate.proxy.HibernateProxy;
