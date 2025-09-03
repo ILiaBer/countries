@@ -1,4 +1,4 @@
-package com.example.photocatalog.controller.error;
+package com.example.test.controller.error;
 
 import java.util.List;
 import java.util.Map;

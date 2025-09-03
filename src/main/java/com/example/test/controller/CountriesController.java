@@ -1,7 +1,7 @@
-package com.example.photocatalog.controller;
+package com.example.test.controller;
 
-import com.example.photocatalog.domain.Country;
-import com.example.photocatalog.service.CountriesService;
+import com.example.test.domain.Country;
+import com.example.test.service.CountriesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

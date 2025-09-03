@@ -1,4 +1,4 @@
-package com.example.photocatalog.ex;
+package com.example.test.ex;
 
 public class CountryNotFoundException extends RuntimeException {
 
